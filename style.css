@@ -1,0 +1,196 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        
+        .main {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(12, 35, 68, .6), rgba(163, 163, 163, 0.6)), url(./road.jpg);
+            background-size: cover;
+        }
+        
+        .container1 {
+            text-align: center;
+            top: 22%;
+            left: 30%;
+            position: absolute;
+        }
+        
+        .time {
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            text-align: center;
+        }
+        
+        .tt {
+            padding: 20px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: rgb(15, 15, 15);
+            color: rgb(255, 255, 255);
+            /* margin-left: 45px; */
+            /* margin-right: 40px; */
+        }
+        
+        .buttons {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin: 20px;
+            padding: 10px;
+        }
+        
+        .buttons button {
+            margin: 20px;
+            font-size: 20px;
+            border-radius: 50px;
+            padding: 20px;
+            background-color: rgb(14, 14, 14);
+            color: rgb(241, 241, 241);
+            font-weight: bold;
+            cursor: pointer;
+            transition: .4s;
+            animation-name: but;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        .buttons button:hover {
+            color: rgb(129, 129, 126);
+            background-color: rgb(207, 207, 207);
+            animation-name: aft;
+            animation-direction: alternate;
+            animation-duration: 1s;
+        }
+        
+        @keyframes aft {
+            from {
+                color: rgb(162, 118, 197);
+                background-color: rgb(192, 177, 177);
+            }
+            to {
+                color: rgb(153, 11, 11);
+                background-color: rgb(212, 212, 212);
+            }
+        }
+        
+        @keyframes but {
+            from {
+                color: rgb(243, 240, 240);
+            }
+            to {
+                color: rgb(151, 151, 238);
+            }
+        }
+        
+        .heading {
+            margin-bottom: 110px;
+            border-radius: 30%;
+            padding: 30px 0;
+            line-height: 30px;
+            box-shadow: 0 0 100px rgb(10, 10, 10);
+            animation-name: head;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            background-color: cadetblue;
+        }
+        
+        .heading h1 {
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            font-family: 'Courier New', Courier, monospace;
+            animation-name: javahead;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes javahead {
+            from {
+                color: rgb(224, 224, 224);
+                font-weight: 200;
+            }
+            to {
+                color: rgb(10, 10, 14);
+                font-weight: bold;
+            }
+        }
+        
+        @keyframes head {
+            from {
+                border-radius: 20%;
+            }
+            to {
+                border-radius: 40%;
+            }
+        }
+        
+        @media screen and (max-Width:800px) {
+            .time {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .tt {
+                margin: 0 10px 0 5px;
+            }
+            .main {
+                height: 200vh;
+                width: 100%;
+            }
+            .heading {
+                margin-bottom: 90px;
+                border-radius: 30%;
+                padding: 20px 0;
+                line-height: 20px;
+            }
+            .heading h1 {
+                font-size: 40px;
+            }
+            .container1 {
+                text-align: center;
+                top: 20%;
+                left: 10%;
+                position: absolute;
+            }
+        }
+        
+        @media screen and (max-Width:500px) {
+            .time {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .tt {
+                margin: 0 10px 0 5px;
+            }
+            .buttons {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .main {
+                height: 250vh;
+                width: 100%;
+            }
+            .container1 {
+                top: 15%;
+                left: 5%;
+            }
+        }
+        
+        marquee {
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            margin-top: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 10px solid rgb(158, 158, 158);
+            background-color: rgb(107, 107, 107);
+            border-radius: 50px;
+            margin: 50px;
+            padding: 5px;
+        }
